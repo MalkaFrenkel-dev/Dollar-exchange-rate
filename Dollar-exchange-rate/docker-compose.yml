@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: ../Dockerfile.server
+    container_name: dollar-server
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../Dollar-exchange-rate/database:/app/database
+    restart: unless-stopped
+
+  client:
+    extra_hosts:
+    - "host.docker.internal:host-gateway"
+    build:
+      context: ./client    
+      dockerfile: ../Dockerfile.client   
+    container_name: dollar-client
+    ports:
+      - "5173:5173"
+    depends_on:
+      - server
+    restart: unless-stopped
+
+
+
+
