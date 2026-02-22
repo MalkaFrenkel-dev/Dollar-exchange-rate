@@ -1,4 +1,6 @@
-export default function AvgDiffTable({ months, differences }) {
+import styles from "./AvarageDifferenceTable.module.css";
+
+export default function AvgDiffCards({ months, differences }) {
   const avgDiff3Months = [];
 
   for (let i = 0; i <= differences.length - 3; i++) {
@@ -13,21 +15,13 @@ export default function AvgDiffTable({ months, differences }) {
   }
 
   return (
-    <table style={{ marginTop: "20px", width: "50%" }}>
-      <thead>
-        <tr>
-          <th>Period</th>
-          <th>Avg difference</th>
-        </tr>
-      </thead>
-      <tbody>
-        {avgDiff3Months.map(row => (
-          <tr key={row.period}>
-            <td>{row.period}</td>
-            <td>{row.value}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <div className={styles.cardsContainer}>
+      {avgDiff3Months.map(row => (
+        <div key={row.period} className={styles.card}>
+          <div className={styles.period}>{row.period}</div>
+          <div className={styles.value}>{row.value}</div>
+        </div>
+      ))}
+    </div>
   );
 }

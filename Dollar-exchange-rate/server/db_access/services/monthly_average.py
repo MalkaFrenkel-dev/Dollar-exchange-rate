@@ -1,9 +1,6 @@
-import sys
-import os
-sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
-
-from update_dollar_exchange import update_dollar_rate
 from dateutil.relativedelta import relativedelta
+
+from db_access.services.update_dollar_exchange import update_dollar_rate
 
 
 def last_month_range(date):
@@ -24,8 +21,8 @@ def calculate_last_month_average(date):
             rate: float = update_dollar_rate(current)
             total += rate
             days += 1
-        except Exception as e:
-            print(f"Failed for day{current}: {e}")
+        except Exception:
+            pass
         current += relativedelta(days=1)
 
     if days == 0:

@@ -1,8 +1,11 @@
-import sys
 import os
+import sys
+
+
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 
 from connection import get_connection
+
 
 def insert_average_to_table(year: int, month: int, rate: float):
     conn = get_connection()
@@ -13,7 +16,7 @@ def insert_average_to_table(year: int, month: int, rate: float):
         INSERT INTO dollar_rate (year, month, rate)
         VALUES (?, ?, ?)
         """,
-        (year, month, rate)
+        (year, month, rate),
     )
 
     conn.commit()
