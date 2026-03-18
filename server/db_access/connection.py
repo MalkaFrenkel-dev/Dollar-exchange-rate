@@ -11,8 +11,4 @@ DB_PATH = os.getenv("DB_PATH", "/app/database/exchange_rates.db")
 
 def get_connection():
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
-<<<<<<< HEAD:server/db_access/connection.py
     return sqlite3.connect(DB_PATH)
-=======
-    return sqlite3.connect(DB_PATH)
->>>>>>> origin/main:Dollar-exchange-rate/server/db_access/connection.py

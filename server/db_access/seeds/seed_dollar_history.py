@@ -18,8 +18,4 @@ def seed_dollar_history():
         if rate is not None:
             last_month = current - relativedelta(months=1)
             insert_average_to_table(last_month.year, last_month.month, rate)
-<<<<<<< HEAD:server/db_access/seeds/seed_dollar_history.py
         current += relativedelta(months=1)
-=======
-        current += relativedelta(months=1)
->>>>>>> origin/main:Dollar-exchange-rate/server/db_access/seeds/seed_dollar_history.py

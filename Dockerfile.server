@@ -1,4 +1,3 @@
-<<<<<<< HEAD:Dockerfile.server
 FROM python:3.11-slim
 
 WORKDIR /app
@@ -12,19 +11,3 @@ RUN pip install --no-cache-dir --upgrade pip \
 EXPOSE 8000
 
 CMD ["sh", "-c", "python -m db_access.init_db && uvicorn main:app --host 0.0.0.0 --port 8000 --reload"]
-=======
-FROM python:3.11-slim
-
-WORKDIR /app
-
-COPY . /app
-
-RUN pip install --no-cache-dir --upgrade pip \
-    && pip install --no-cache-dir -r server_requirements.txt
-
-# RUN python /app/db_access/init_db.py
-
-EXPOSE 8000
-
-CMD ["sh", "-c", "python /app/db_access/init_db.py && uvicorn main:app --host 0.0.0.0 --port 8000 --reload"]
->>>>>>> origin/main:Dollar-exchange-rate/Dockerfile.server
