@@ -31,8 +31,4 @@ export async function fetchForecasts() {
     } catch {
         return [];
     }
-<<<<<<< HEAD:client/src/api/api.js
 }
-=======
-}
->>>>>>> origin/main:Dollar-exchange-rate/client/src/api/api.js

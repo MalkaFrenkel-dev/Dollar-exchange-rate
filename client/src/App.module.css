@@ -6,19 +6,11 @@
     padding: 24px 32px;
     overflow-x: auto;
     overflow-y: auto;
-<<<<<<< HEAD:client/src/App.module.css
     background: linear-gradient(to bottom,
             rgba(48, 46, 46, 0),
             rgba(47, 129, 247, 0.15),
             rgba(247, 47, 129, 0.15));
 
-=======
-    background: linear-gradient(to bottom,
-            rgba(48, 46, 46, 0),
-            rgba(47, 129, 247, 0.15),
-            rgba(247, 47, 129, 0.15));
-
->>>>>>> origin/main:Dollar-exchange-rate/client/src/App.module.css
     color: #e6edf3;
 }
 
@@ -68,7 +60,6 @@
     margin: 24px 0 0;
 
 }
-<<<<<<< HEAD:client/src/App.module.css
 
 @keyframes nudge {
     0% {
@@ -119,56 +110,4 @@
 *::before,
 *::after {
     box-sizing: border-box;
-=======
-
-@keyframes nudge {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(3px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.scrollHint {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    pointer-events: none;
-    z-index: 1000;
-
-    background: linear-gradient(to bottom,
-            rgba(48, 46, 46, 0),
-            rgba(47, 129, 247, 0.15),
-            rgba(247, 47, 129, 0.15));
-
-    animation: nudge 0.9s ease-out infinite;
-}
-
-@keyframes nudge {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(8px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
->>>>>>> origin/main:Dollar-exchange-rate/client/src/App.module.css
 }

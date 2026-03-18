@@ -1,4 +1,3 @@
-<<<<<<< HEAD:client/src/components/AvarageDifferenceTable.module.css
 .cardsContainer {
   display: flex;
   flex-wrap: wrap;
@@ -37,43 +36,3 @@
   font-weight: 600;
   color: #e6edf3;
 }
-=======
-.cardsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 20px;
-  justify-content: flex-start;
-}
-
-.card {
-  background: linear-gradient(
-    135deg,
-    rgba(47, 129, 247, 0.1),
-    rgba(247, 47, 129, 0.1)
-  );
-  border-radius: 12px;
-  padding: 16px 20px;
-  min-width: 140px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-.period {
-  font-size: 14px;
-  color: #8b949e;
-  margin-bottom: 6px;
-}
-
-.value {
-  font-size: 20px;
-  font-weight: 600;
-  color: #e6edf3;
-}
->>>>>>> origin/main:Dollar-exchange-rate/client/src/components/AvarageDifferenceTable.module.css
