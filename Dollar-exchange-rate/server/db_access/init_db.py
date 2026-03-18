@@ -13,14 +13,15 @@ def is_dollar_rate_empty() -> bool:
     conn.close()
     return count == 0
 
-def init_db():
+
+def init_db() -> None:
     try:
         init_schema()
         if is_dollar_rate_empty():
-          seed_dollar_history() 
-        print("--------------inited-------------------")
-    except Exception as error:
-        print(f"Error initializing database: {error}")
-        
+            seed_dollar_history()
+    except Exception:
+        pass
+
+
 if __name__ == "__main__":
     init_db()

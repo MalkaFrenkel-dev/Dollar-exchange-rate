@@ -7,7 +7,7 @@ COPY . /app
 RUN pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir -r server_requirements.txt
 
-RUN python /app/db_access/init_db.py
+# RUN python /app/db_access/init_db.py
 
 EXPOSE 8000
 

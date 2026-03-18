@@ -6,9 +6,8 @@ import {
   LineElement,
   Title,
   Tooltip,
-  Legend,
-} from 'chart.js';
-import { Line } from 'react-chartjs-2';
+} from "chart.js";
+import { Line } from "react-chartjs-2";
 
 ChartJS.register(
   CategoryScale,
@@ -17,24 +16,51 @@ ChartJS.register(
   LineElement,
   Title,
   Tooltip,
-  Legend
 );
 
-export default function AverageGraph({ months, averages, selectedMonth }) {
+import flashStyles from "../styles/flash.module.css";
+import styles from "./AverageGraph.module.css";
+
+export default function AverageGraph({
+  months,
+  averages,
+  selectedMonth,
+  flash
+}) {
   const data = {
     labels: months,
     datasets: [
       {
-        label: "Average Rate",
         data: averages,
-        borderColor: "blue",
-        backgroundColor: "blue",
-        fill: false,
-        pointRadius: months.map(m => (m === selectedMonth ? 8 : 3)),
-        pointBackgroundColor: months.map(m => (m === selectedMonth ? "yellow" : "blue")),
-      },
-    ],
-  };
+        borderColor: "rgba(47, 129, 247, 0.6)",
+        pointRadius: months.map(m => (m === selectedMonth ? 7 : 3)),
 
-  return <Line data={data} />;
+    pointBackgroundColor: months.map(m =>
+      m === selectedMonth
+        ? "rgb(88, 101, 242)"  
+        : "rgba(47, 129, 247, 0.8)"
+    ),
+
+    pointBorderColor: months.map(m =>
+      m === selectedMonth
+        ? "rgba(168, 85, 247, 0.8)" 
+        : "transparent"
+    ),
+
+    pointBorderWidth: months.map(m =>
+      m === selectedMonth ? 6 : 0
+    ),}]
+  
+
+  };
+const options = {
+  responsive: true,
+  maintainAspectRatio: false,
+};
+
+  return (
+    <div className={`${styles.container} ${flash ? flashStyles.flash : ""}`}>
+      <Line data={data} options={options} />
+    </div>
+  );
 }

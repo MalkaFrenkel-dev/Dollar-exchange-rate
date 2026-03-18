@@ -1,5 +1,6 @@
 from db_access.connection import get_connection
 
+
 def get_all_rates(order_by="month"):
     conn = None
     try:
@@ -8,13 +9,13 @@ def get_all_rates(order_by="month"):
 
         if order_by == "rate":
             query = """
-                SELECT year, month, rate
+                SELECT year, month, ROUND(rate, 3) AS rate
                 FROM dollar_rate
                 ORDER BY rate ASC
             """
         else:
             query = """
-                SELECT year, month, rate
+                SELECT year, month, ROUND(rate, 3) AS rate
                 FROM dollar_rate
                 ORDER BY year, month
             """

@@ -1,13 +1,37 @@
+import { useState } from "react";
+import styles from "./MonthSelector.module.css";
 
-function MonthSelector({ months, onSelect }) {
+export default function MonthSelector({ months, onSelect }) {
+  const [open, setOpen] = useState(false);
+  const [selected, setSelected] = useState("");
+
+  function handleSelect(month) {
+    setSelected(month);
+    onSelect(month);
+    setOpen(false);
+  }
+
   return (
-    <select onChange={e => onSelect(e.target.value || null)}>
-      <option value="">בחר חודש</option>
-      {months.map(m => (
-        <option key={m} value={m}>{m}</option>
-      ))}
-    </select>
+    <div className={styles.wrapper}>
+      <div 
+        className={styles.selected} 
+        onClick={() => setOpen(!open)}
+      >
+        {selected || "בחר חודש"}
+      </div>
+      {open && (
+        <div className={styles.dropdown}>
+          {months.map((month) => (
+            <div 
+              key={month} 
+              className={styles.option}
+              onClick={() => handleSelect(month)}
+            >
+              {month}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
-
-export default MonthSelector;
