@@ -15,4 +15,8 @@ def validate_date(year: int, month: int):
 
     today = date.today()
     if (year, month) > (today.year, today.month):
+<<<<<<< HEAD:server/services/data_validation.py
         raise HTTPException(status_code=400, detail="Future date not allowed")
+=======
+        raise HTTPException(status_code=400, detail="Future date not allowed")
+>>>>>>> origin/main:Dollar-exchange-rate/server/services/data_validation.py

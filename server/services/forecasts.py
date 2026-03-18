@@ -44,4 +44,8 @@ def forecasts():
         return forecasts_list
 
     except Exception:
+<<<<<<< HEAD:server/services/forecasts.py
         return []
+=======
+        return []
+>>>>>>> origin/main:Dollar-exchange-rate/server/services/forecasts.py

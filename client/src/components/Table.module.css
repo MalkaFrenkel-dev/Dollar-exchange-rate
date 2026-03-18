@@ -20,6 +20,7 @@ td {
 .selectedRow {
   position: relative;
   outline: 2px solid rgba(111, 76, 255, 0.8);
+<<<<<<< HEAD:client/src/components/Table.module.css
   outline-offset: -2px;
 
   box-shadow:
@@ -46,3 +47,32 @@ td {
       0 0 16px rgba(247, 47, 129, 0.25);
   }
 }
+=======
+  outline-offset: -2px;
+
+  box-shadow:
+    0 0 12px rgba(47, 129, 247, 0.45),
+    0 0 24px rgba(247, 47, 129, 0.35);
+
+  animation: glowPulse 1.2s ease-in-out infinite;
+}
+
+/* אנימציה עדינה */
+@keyframes glowPulse {
+  0% {
+    box-shadow:
+      0 0 8px rgba(47, 129, 247, 0.35),
+      0 0 16px rgba(247, 47, 129, 0.25);
+  }
+  50% {
+    box-shadow:
+      0 0 16px rgba(47, 129, 247, 0.6),
+      0 0 28px rgba(247, 47, 129, 0.45);
+  }
+  100% {
+    box-shadow:
+      0 0 8px rgba(47, 129, 247, 0.35),
+      0 0 16px rgba(247, 47, 129, 0.25);
+  }
+}
+>>>>>>> origin/main:Dollar-exchange-rate/client/src/components/Table.module.css

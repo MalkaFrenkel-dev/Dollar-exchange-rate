@@ -28,4 +28,8 @@ def one_rate(year: int, month: int):
 
 @router.get("/forecasts")
 def all_forecasts():
+<<<<<<< HEAD:server/api/routes.py
     return forecasts()
+=======
+    return forecasts()
+>>>>>>> origin/main:Dollar-exchange-rate/server/api/routes.py

@@ -3,6 +3,7 @@
     width: 200px;
     min-height: 120px;
     top: 0;
+<<<<<<< HEAD:client/src/components/MonthPopup.module.css
     left: 50%;
     transform: translateX(-50%);
     border: 1px solid #30363d;
@@ -13,6 +14,21 @@
             rgba(247, 47, 129, 0.15));
     border: 1px solid rgba(47, 129, 247, 0.5);
     border-radius: 16px;
+=======
+    /* מרחק מהחלק העליון של העמוד */
+    left: 50%;
+    /* באמצע רוחבית */
+    transform: translateX(-50%);
+    /* להזיז חצי מהרוחב אחורה כדי למרכז */
+    border: 1px solid #30363d;
+    border-radius: 14px;
+
+    background: linear-gradient(135deg,
+            rgba(47, 129, 247, 0.15),
+            rgba(247, 47, 129, 0.15));
+    border: 1px solid rgba(47, 129, 247, 0.5);
+    border-radius: 16px;
+>>>>>>> origin/main:Dollar-exchange-rate/client/src/components/MonthPopup.module.css
     padding: 16px 20px;
     display: flex;
     flex-direction: column;
@@ -23,10 +39,17 @@
     box-shadow:
         0 0 20px rgba(47, 129, 247, 0.35),
         0 0 40px rgba(247, 47, 129, 0.25);
+<<<<<<< HEAD:client/src/components/MonthPopup.module.css
     color: #e6edf3;
     backdrop-filter: blur(10px);
 }
 
+=======
+    color: #e6edf3;
+    backdrop-filter: blur(10px);
+}
+
+>>>>>>> origin/main:Dollar-exchange-rate/client/src/components/MonthPopup.module.css
 .title {
     font-size: 13px;
     color: #8b949e;
@@ -38,6 +61,7 @@
     font-weight: 600;
     width: 100%;
 }
+<<<<<<< HEAD:client/src/components/MonthPopup.module.css
 
 .close {
     position: absolute;
@@ -47,4 +71,15 @@
     border: none;
     color: #8b949e;
     cursor: pointer;
+=======
+
+.close {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    background: none;
+    border: none;
+    color: #8b949e;
+    cursor: pointer;
+>>>>>>> origin/main:Dollar-exchange-rate/client/src/components/MonthPopup.module.css
 }

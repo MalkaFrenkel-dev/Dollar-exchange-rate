@@ -1,3 +1,4 @@
+<<<<<<< HEAD:client/src/styles/flash.module.css
 .flash {
   animation: pulse 0.3s ease-in-out;
 }
@@ -7,3 +8,14 @@
   50% { box-shadow: 0 0 20px rgba(47,129,247,0.5); }
   100% { box-shadow: 0 0 0 rgba(194, 48, 238, 0); }
 }
+=======
+.flash {
+  animation: pulse 0.3s ease-in-out;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 rgba(47,129,247,0); }
+  50% { box-shadow: 0 0 20px rgba(47,129,247,0.5); }
+  100% { box-shadow: 0 0 0 rgba(194, 48, 238, 0); }
+}
+>>>>>>> origin/main:Dollar-exchange-rate/client/src/styles/flash.module.css

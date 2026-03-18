@@ -23,4 +23,8 @@ def update_dollar_rate(date):
 
     data = response.json()
     rate = float(data["conversion_rates"]["ILS"])
+<<<<<<< HEAD:server/db_access/services/update_dollar_exchange.py
     return rate
+=======
+    return rate
+>>>>>>> origin/main:Dollar-exchange-rate/server/db_access/services/update_dollar_exchange.py

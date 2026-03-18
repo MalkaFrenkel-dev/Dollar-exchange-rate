@@ -28,4 +28,8 @@ def calculate_last_month_average(date):
     if days == 0:
         raise RuntimeError("No data for last month")
 
+<<<<<<< HEAD:server/db_access/services/monthly_average.py
     return total / days
+=======
+    return total / days
+>>>>>>> origin/main:Dollar-exchange-rate/server/db_access/services/monthly_average.py

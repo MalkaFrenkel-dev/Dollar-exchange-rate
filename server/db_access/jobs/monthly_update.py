@@ -13,4 +13,8 @@ try:
     avg = calculate_last_month_average(today)
     insert_average_to_table(today.year, today.month, avg)
 except Exception:
+<<<<<<< HEAD:server/db_access/jobs/monthly_update.py
     pass
+=======
+    pass
+>>>>>>> origin/main:Dollar-exchange-rate/server/db_access/jobs/monthly_update.py

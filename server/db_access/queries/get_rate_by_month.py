@@ -16,4 +16,8 @@ def get_rate_by_month(year, month):
         row = cursor.fetchone()
         return round(row[0], 3) if row else None
     finally:
+<<<<<<< HEAD:server/db_access/queries/get_rate_by_month.py
         conn.close()
+=======
+        conn.close()
+>>>>>>> origin/main:Dollar-exchange-rate/server/db_access/queries/get_rate_by_month.py

@@ -25,4 +25,8 @@ def get_all_rates(order_by="month"):
 
     finally:
         if conn:
+<<<<<<< HEAD:server/db_access/queries/get_all_rates.py
             conn.close()
+=======
+            conn.close()
+>>>>>>> origin/main:Dollar-exchange-rate/server/db_access/queries/get_all_rates.py

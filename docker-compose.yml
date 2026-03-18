@@ -1,3 +1,4 @@
+<<<<<<< HEAD:docker-compose.yml
 
 services:
   client:
@@ -11,6 +12,21 @@ services:
       - server
     restart: unless-stopped
 
+=======
+
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: ../Dockerfile.client
+    container_name: dollar-client
+    ports:
+      - "5173:5173"
+    depends_on:
+      - server
+    restart: unless-stopped
+
+>>>>>>> origin/main:Dollar-exchange-rate/docker-compose.yml
   server:
     build:
       context: ./server
